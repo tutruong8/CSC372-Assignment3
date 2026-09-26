@@ -1,0 +1,254 @@
+/* Catppuccin Mocha with lavender accents */
+:root {
+	--base: #1e1e2e;
+	--surface: #313244;
+	--overlay: #45475a;
+	--text: #cdd6f4;
+	--subtext: #a6adc8;
+	--lavender: #b4befe;
+	--blue: #89b4fa;
+}
+
+body {
+	max-width: 1200px;
+	margin: 0 auto;
+	color: var(--text);
+	background: var(--base);
+	font-family: Arial, sans-serif;
+	line-height: 1.5;
+}
+
+img {
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	object-fit: contain;
+}
+
+a {
+	color: var(--blue);
+}
+
+h1,
+h2,
+h3 {
+	color: var(--lavender);
+}
+
+.site-header,
+.site-footer {
+	padding: 16px;
+	background: var(--surface);
+	border: 1px solid var(--overlay);
+}
+
+.site-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	flex-wrap: wrap;
+}
+
+.logo,
+.tagline,
+.site-footer p {
+	margin: 0;
+}
+
+.logo {
+	color: var(--lavender);
+	font-size: 1.4rem;
+	font-weight: bold;
+}
+
+.tagline,
+.event-info {
+	color: var(--subtext);
+}
+
+.primary-nav ul,
+.footer-nav ul {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	flex-wrap: wrap;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.hero,
+.event-intro {
+	display: flex;
+	align-items: center;
+	gap: 32px;
+	padding: 48px 16px;
+}
+
+.hero-text,
+.hero-figure,
+.event-hero-figure,
+.event-intro-text {
+	flex: 1 1 0;
+}
+
+.hero-figure,
+.event-hero-figure {
+	margin: 0;
+	border: 4px solid var(--lavender);
+}
+
+.event-hero-figure img {
+	aspect-ratio: 1 / 1;
+	object-fit: contain;
+	background: var(--base);
+}
+
+#hero-image {
+	width: 100%;
+	height: auto;
+}
+
+.button,
+#register-button {
+	display: inline-block;
+	padding: 9.6px 14.4px;
+	color: var(--base);
+	background: var(--lavender);
+	border: 1px solid var(--lavender);
+	text-decoration: none;
+}
+
+.events-section,
+.about-section,
+.related-events {
+	padding: 32px 16px;
+	border-top: 1px solid var(--overlay);
+}
+
+.events-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 16px;
+}
+
+.featured-event-card {
+	grid-column: span 2;
+}
+
+.event-card,
+.featured-event-card,
+.compact-event-card,
+.event-main,
+.event-sidebar {
+	background: var(--surface);
+	border: 1px solid var(--overlay);
+}
+
+.event-card img,
+.featured-event-card img,
+.compact-event-card img {
+	aspect-ratio: 1 / 1;
+	object-fit: contain;
+	background: var(--base);
+}
+
+.event-card-body {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	gap: 8px;
+	padding: 16px;
+}
+
+.event-card-body h3,
+.event-card-body p {
+	margin: 0;
+}
+
+.event-card-body a {
+	margin-top: 8px;
+}
+
+.category {
+	padding: 2.4px 8px;
+	color: var(--base);
+	background: var(--lavender);
+	border: 1px solid var(--lavender);
+	font-size: 0.8rem;
+}
+
+.benefits-list,
+.agenda-list,
+.event-details-list {
+	padding-left: 20px;
+}
+
+.event-layout {
+	display: grid;
+	grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr);
+	gap: 16px;
+	padding: 0 16px 32px;
+}
+
+.event-main,
+.event-sidebar {
+	padding: 16px;
+}
+
+#register-button {
+	margin-top: 12px;
+	cursor: pointer;
+}
+
+.related-events-list {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 16px;
+}
+
+.site-footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+	.events-grid,
+	.related-events-list {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.featured-event-card {
+		grid-column: span 2;
+	}
+}
+
+@media (max-width: 600px) {
+	.site-header,
+	.site-footer,
+	.hero,
+	.event-intro {
+		align-items: stretch;
+		flex-direction: column;
+	}
+
+	.primary-nav ul,
+	.footer-nav ul {
+		justify-content: flex-start;
+	}
+
+	.events-grid,
+	.related-events-list,
+	.event-layout {
+		grid-template-columns: 1fr;
+	}
+
+	.featured-event-card {
+		grid-column: auto;
+	}
+}
