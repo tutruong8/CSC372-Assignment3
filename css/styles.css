@@ -172,6 +172,53 @@ h3 {
 	margin-top: 8px;
 }
 
+.save-event-button {
+	margin-top: 4px;
+	padding: 8px 12px;
+	color: var(--text);
+	background: transparent;
+	border: 1px solid var(--lavender);
+	cursor: pointer;
+}
+
+.save-event-button:hover,
+.save-event-button:focus-visible {
+	color: var(--base);
+	background: var(--lavender);
+}
+
+.event-card.is-saved,
+.featured-event-card.is-saved {
+	border-color: var(--lavender);
+	box-shadow: 0 0 0 2px var(--lavender);
+}
+
+.event-card.is-saved .save-event-button,
+.featured-event-card.is-saved .save-event-button {
+	color: var(--base);
+	background: var(--lavender);
+}
+
+.saved-events-section {
+	padding: 24px 16px 32px;
+	border-top: 1px solid var(--overlay);
+}
+
+.saved-events-section h2 {
+	margin-top: 0;
+}
+
+.saved-events-list {
+	display: grid;
+	gap: 8px;
+	padding-left: 20px;
+	margin-bottom: 0;
+}
+
+.saved-events-empty {
+	color: var(--subtext);
+}
+
 .category {
 	padding: 2.4px 8px;
 	color: var(--base);
