@@ -30,7 +30,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
         savedCards.forEach((card) => {
             const listItem = document.createElement("li");
-            listItem.textContent = card.querySelector("h3").textContent;
+
+            const eventName = document.createElement("strong");
+            eventName.textContent = card.querySelector("h3").textContent;
+
+            const eventInfo = document.createElement("span");
+            eventInfo.textContent = card.querySelector(".event-info").textContent;
+
+            listItem.append(eventName, eventInfo);
             savedEventsList.appendChild(listItem);
         });
 
